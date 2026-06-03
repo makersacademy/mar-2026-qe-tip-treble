@@ -47,7 +47,7 @@ def test_get_by_dates_invalid_range(db_connection):
     db_connection.seed("seeds/test_gigs.sql")
     repo = GigRepository(db_connection)
     with pytest.raises(Exception) as e:
-        repo.get_by_dates("2025-06-14", "2026-06-16")
+        repo.get_by_dates("2025-06-14", "2025-06-13")
     assert str(e.value) == "Past cannot be after future"
 
 def test_get_by_location_and_dates_specific(db_connection):
