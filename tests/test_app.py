@@ -1,4 +1,4 @@
-from playwright.sync_api import expect
+
 
 def test_get_index(page, test_web_address):
     page.goto(f"http://{test_web_address}/")
